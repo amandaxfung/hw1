@@ -9,7 +9,7 @@ const db = mongoose.connection
 const Schema = mongoose.Schema
 const personSchema = new Schema({
     string: String,
-    length: float,
+    length: Number,
 })
 
 //const people = mongoose.model('people', personSchema)
