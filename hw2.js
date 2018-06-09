@@ -2,11 +2,6 @@ const express = require('express')
 const router = express.Router()
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/CS591')
-const db = mongoose.connection
-db.once('open', function () {
-    console.log('Connection successful.')
-})
 
 const Schema = mongoose.Schema
 const stringSchema = new Schema({
