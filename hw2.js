@@ -7,8 +7,8 @@ const Schema = mongoose.Schema
 const stringSchema = new Schema({
     string: String,
     length: Number
-
 })
+
 const instring = mongoose.model('instring', stringSchema)
 
 //get all strings
@@ -16,8 +16,7 @@ router.get('/', function (req, res, next) {
     instring.find({}, function (err, results) {
         res.json(results);
     })
-
-})
+});
 
 //display string
 router.get('/:instr', function (req, res, next) {
@@ -38,8 +37,7 @@ router.get('/:instr', function (req, res, next) {
             res.json({string: strs, length: strs.length})
         }
     })
-
-})
+});
 
 //Create a new user
 router.post('/', function(req, res, next) {
